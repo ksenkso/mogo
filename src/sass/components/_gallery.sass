@@ -1,0 +1,91 @@
+.gallery
+  display: flex
+  justify-content: space-between
+  +r(600)
+    flex-direction: column
+  &_tall
+    +r(800)
+      flex-direction: column
+    .gallery
+      &__picture
+        height: 470px
+        +r(800)
+          height: 240px
+      &__image
+        object-fit: cover
+        +r(800)
+          height: 240px
+          object-position: 0 20%         
+  &__social
+    opacity: 0
+    position: absolute
+    display: flex
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: opacity .3s linear .2s
+    z-index: 1        
+  &__title
+    margin-top: 27px
+    color: #333 
+    font-size: 14px
+    text-transform: uppercase
+    margin-bottom: 1em
+    +r(800)
+      margin-top: 1em
+      margin-bottom: 0.5em
+      text-align: center
+  &__sub
+    font-size: 15px
+    color: #999 
+    font-family: "Roboto" , sans-serif
+    font-style: italic
+    font-weight: 300 
+    +r(800)
+      margin-bottom: 1.6em
+      text-align: center
+  &__item
+    position: relative
+    margin-right: 30px
+    +lch
+      margin-right: 0  
+    +r(600)
+      margin-right: 0
+      margin-bottom: 30px  
+      +lch
+        margin-bottom: 0
+    &:hover
+      .gallery__text, .gallery__social
+        opacity: 1
+      .gallery__picture
+        -webkit-box-shadow: 10px 10px 0 0 $aqua 
+        box-shadow: 10px 10px 0 0 $aqua 
+        &:before
+          opacity: 1 
+  &__image    
+    width: 100%
+    height: 100%
+    display: block
+    object-fit: cover
+    +r(800)
+      height: 240px
+      object-position: center
+  &__picture
+    position: relative
+    transition: box-shadow .3s linear
+    @extend %g-overlay
+     
+  &__text
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    color: #FFF
+    opacity: 0
+    transition: opacity .3s ease-in-out 
+    z-index: 1
+    svg
+      fill: #fff

@@ -1,0 +1,53 @@
+.footer
+  padding-top: 77px
+  padding-bottom: 70px
+  .container
+    display: flex
+    justify-content: space-between
+    +r(950)
+      flex-direction: column
+  &__about
+    flex: 0 1 480px
+    display: flex
+    flex-direction: column
+    +r(950)
+      align-items: center
+      flex-basis: auto
+      margin-bottom: 2em
+  &__logo
+    font-size: 46px
+    color: #CCC
+    font-weight: bold
+    margin-bottom: 40px
+  &__followers
+    margin-top: 40px
+    margin-bottom: 1em
+    font-size: 14px
+    color: #333 
+    strong
+      font-size: 18px
+  &__follow
+    padding-top: 1em
+    border-top: 1px solid #e5e5e5
+  &__follow-text
+    +light
+    font-style: italic
+    color: #999 
+    +r(500)
+      display: block
+      
+  .icon
+    font-size: 16px
+    fill: $aqua
+    +fch
+      margin-left: 14px
+  &__title
+    font-weight: bold
+    color: #333 
+    font-size: 14px
+    text-transform: uppercase
+    margin-bottom: 38px
+  &__instagram
+    text-align: center
+    .footer__title 
+      text-align: left

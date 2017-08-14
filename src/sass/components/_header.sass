@@ -1,0 +1,46 @@
+.header
+  height: 1000px
+  +bgcv
+  background-image: $gradient, url(/img/hero.jpg)
+  &__center
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+  &__title
+    font-family: "Kaushan Script", serif
+    font-size: 72px
+    color: #FFF
+    margin-top: 150px
+    margin-bottom: 50px
+    line-height: 1
+    text-align: center
+    +r(900)
+      font-size: 50px
+    +r(550)
+      font-size: 32px
+    +r(400)
+      font-size: 28px
+  &__sub
+    margin-bottom: 70px
+    font-size: 150px
+    font-weight: bold
+    color: #FFF
+    line-height: 1
+    text-align: center
+    text-transform: uppercase
+    +r(900)
+      font-size: 100px
+    +r(650)
+      font-size: 85px
+    +r(550)
+      font-size: 65px
+    +r(400)
+      font-size: 44px
+  &__row
+  	display: flex
+    position: relative
+  	justify-content: space-between
+  	align-items: baseline
+  .icon.icon-menu
+    font-size: 32px

@@ -1,0 +1,35 @@
+.timelines
+  margin-top: 157px
+  display: flex
+  justify-content: space-between
+  .timeline
+    color: #FFF 
+    flex: 1
+    margin-right: 30px
+    +lch
+      margin-right: 0
+    +r(550)
+      margin-right: 20px
+      
+    &__total
+      position: relative
+      height: 3px
+      background-color: #FFF 
+      margin-bottom: 20px
+    &__current
+      position: absolute
+      height: 100%
+      top: 0
+      left: 0
+      background-color: $red
+    &__number
+      font-weight: bold
+      font-size: 24px
+      +r(650)
+        font-size: 18px
+    &__text
+      font-weight: normal
+      font-size: 18px
+      text-transform: uppercase
+      +r(650)
+        font-size: 13px

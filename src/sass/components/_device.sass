@@ -1,0 +1,61 @@
+.device
+  position: absolute
+  background-position: top
+  background-size: cover
+  background-repeat: no-repeat
+  &_iphone
+    height: 470px
+    width: 220px
+    background-image: url(/img/iphone.png)
+    left: 65%
+    bottom: -87px 
+    transition: transform .3s linear, left .3s linear 
+    +r(650)
+      bottom: -150px
+      left: 47%
+      transform: rotate(-90deg)
+    +r(400)
+        bottom: -10px
+  &_ipad
+      width: 475px
+      height: 582px
+      background-image: url(/img/ipad.png) 
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      +r(650)
+        max-width: 90vw 
+      +r(476)
+        background-size: contain 
+      +r(400)
+        width: 175%
+        max-width: none
+        background-size: cover
+        top: 173px
+      
+  &__image
+    position: absolute
+    background-size: contain
+    background-repeat: no-repeat
+    &_ipad
+      left: 22px
+      top: 70px
+      width: 433px
+      height: 512px
+      -webkit-background-size: cover
+      -o-background-size: cover
+      background-size: cover
+      +r(650)
+        max-width: calc(90vw - 44px)
+      +r(476)
+        background-size: contain 
+      +r(400)
+        max-width: initial
+        width: calc(175% - 22px)
+        background-size: cover
+        left: -218px
+    &_iphone
+      left: 16px
+      top: 62px
+      width: 179px
+      height: 313px

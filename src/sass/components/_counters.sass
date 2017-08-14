@@ -1,0 +1,30 @@
+.counters
+  display: flex
+  +r(750)
+    flex-direction: column
+  .counter
+    display: flex
+    flex: 1
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 80px 0 88px 0
+    color: #FFF 
+    border-left: 1px solid #b5eae0
+    +lch
+      border-right: 1px solid #b5eae0
+    +r(750)
+      border: none
+      padding: 20px 0
+      +fch
+        padding-top: 0
+      +lch
+        border: none
+        padding-bottom: 0
+    &__value
+      font-size: 72px
+      font-weight: bold
+    &__text
+      text-align: center
+      font-size: 14px
+      text-transform: uppercase

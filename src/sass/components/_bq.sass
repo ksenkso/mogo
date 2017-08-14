@@ -1,0 +1,54 @@
+.bq
+  display: flex !important
+  align-items: center
+  &__quote
+    font-size: 24px
+    font-family: "Roboto", sans-serif
+    font-style: italic
+    font-weight: 300
+    color: #999  
+    quotes: "“" "”"
+    &:before
+      content: open-quote
+    &:after
+      content: close-quote 
+    +r(900)
+      font-size: 16px
+  &__icon
+    flex: 1 0 150px
+    height: 150px
+    border: 3px solid $aqua
+    line-height: 156px
+    text-align: center 
+    font-size: 62px  
+    margin-right: 59px
+    +r(900)
+      flex: 1 0 100px
+      height: 100px
+      line-height: 106px
+      font-size: 35px  
+    +r(550)
+      display: none
+    svg
+      fill: $aqua
+  &__author
+    display: inline-block
+    vertical-align: middle
+    font-family: "Kaushan Script", serif
+    font-size: 24px
+    +r(900)
+      font-size: 18px
+  &__image
+    +bgcv
+    flex: 0 0 210px
+    height: 210px
+    border-radius: 50%
+    margin-right: 30px
+    +r(900)
+      flex-basis: 120px
+      height: 120px
+    +r(650)
+      flex-basis: 90px
+      height: 90px
+    +r(500)
+      display: none
